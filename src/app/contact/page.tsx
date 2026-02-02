@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, Mail, MessageSquare, MapPin, Clock, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MessageSquare, MapPin, ShieldCheck } from "lucide-react";
 
 export const metadata = {
     title: "Contact Er. Satyam Singh | Engineering Consultation & Site Visits",
@@ -18,7 +18,7 @@ export default function ContactPage() {
                             <span className="w-8 h-[2px] bg-brand" />
                             <span>Contact & Consultation</span>
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6 italic">Secure Your Project's <br /><span className="text-brand">Legal Approval</span></h1>
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6 italic">Secure Your Project&apos;s <br /><span className="text-brand">Legal Approval</span></h1>
                         <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
                             Available for site visits, technical audits, and authority liaison across UP and Delhi NCR. Direct access to expert civil consultancy.
                         </p>

@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { ArrowRight, ShieldCheck, Award, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
     return (
@@ -12,7 +15,12 @@ const HeroSection = () => {
 
             <div className="container-custom">
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                    <div className="flex-1 text-center lg:text-left">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="flex-1 text-center lg:text-left"
+                    >
                         <div className="inline-flex items-center space-x-2 bg-brand/10 text-brand px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
                             <ShieldCheck className="w-4 h-4" />
                             <span>Registered Engineer & Valuer</span>
@@ -67,10 +75,15 @@ const HeroSection = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Credentials Highlight Card */}
-                    <div className="flex-1 w-full max-w-lg">
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="flex-1 w-full max-w-lg"
+                    >
                         <div className="relative">
                             <div className="absolute -inset-2 bg-gradient-to-tr from-brand to-brand-light opacity-20 blur-2xl rounded-[2rem]" />
                             <div className="relative bg-white border border-gray-100 rounded-2xl shadow-2xl p-8 transform rotate-1 md:rotate-2 transition-transform hover:rotate-0 duration-500">
@@ -131,7 +144,7 @@ const HeroSection = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

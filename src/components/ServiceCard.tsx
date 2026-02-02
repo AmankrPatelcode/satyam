@@ -10,7 +10,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
     // Dynamically get the icon component
-    const IconComponent = (Icons as any)[service.icon] || Icons.FileText;
+    const IconComponent = (Icons as unknown as Record<string, React.ElementType>)[service.icon] || Icons.FileText;
 
     return (
         <div className="service-card group flex flex-col h-full">

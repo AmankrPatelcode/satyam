@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Phone, MessageSquare, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { services } from "@/data/services";
 
@@ -101,81 +102,89 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu */}
-            <div
-                className={cn(
-                    "lg:hidden fixed inset-0 top-[60px] bg-white z-[40] transition-transform duration-300 ease-in-out",
-                    isOpen ? "translate-x-0" : "translate-x-full"
-                )}
-            >
-                <div className="container-custom py-8 flex flex-col space-y-6">
-                    <Link
-                        href="/"
-                        onClick={() => setIsOpen(false)}
-                        className="text-lg font-semibold border-b border-gray-100 pb-2"
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ x: "100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "100%" }}
+                        transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                        className={cn(
+                            "lg:hidden fixed inset-0 top-[60px] bg-white z-[40] overflow-y-auto"
+                        )}
+                        style={{ maxHeight: "calc(100vh - 60px)" }}
                     >
-                        Home
-                    </Link>
-                    <Link
-                        href="/about"
-                        onClick={() => setIsOpen(false)}
-                        className="text-lg font-semibold border-b border-gray-100 pb-2"
-                    >
-                        About
-                    </Link>
-                    <div className="flex flex-col space-y-4">
-                        <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">
-                            Our Services
-                        </span>
-                        <div className="grid grid-cols-1 gap-3">
-                            {services.slice(0, 6).map((service) => (
-                                <Link
-                                    key={service.id}
-                                    href={`/services/${service.slug}`}
-                                    onClick={() => setIsOpen(false)}
-                                    className="text-base font-medium text-text hover:text-brand"
-                                >
-                                    {service.title}
-                                </Link>
-                            ))}
+                        <div className="container-custom py-8 flex flex-col space-y-6">
                             <Link
-                                href="/services"
+                                href="/"
                                 onClick={() => setIsOpen(false)}
-                                className="text-brand font-semibold underline"
+                                className="text-lg font-semibold border-b border-gray-100 pb-2"
                             >
-                                View All Services
+                                Home
                             </Link>
-                        </div>
-                    </div>
-                    <Link
-                        href="/contact"
-                        onClick={() => setIsOpen(false)}
-                        className="text-lg font-semibold border-b border-gray-100 pb-2"
-                    >
-                        Contact
-                    </Link>
-
-                    <div className="pt-6 flex flex-col space-y-4">
-                        <a
-                            href="tel:+918299854096"
-                            className="flex items-center space-x-3 text-lg font-bold"
-                        >
-                            <div className="bg-brand/10 p-2 rounded-full">
-                                <Phone className="w-5 h-5 text-brand" />
+                            <Link
+                                href="/about"
+                                onClick={() => setIsOpen(false)}
+                                className="text-lg font-semibold border-b border-gray-100 pb-2"
+                            >
+                                About
+                            </Link>
+                            <div className="flex flex-col space-y-4">
+                                <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">
+                                    Our Services
+                                </span>
+                                <div className="grid grid-cols-1 gap-3">
+                                    {services.slice(0, 6).map((service) => (
+                                        <Link
+                                            key={service.id}
+                                            href={`/services/${service.slug}`}
+                                            onClick={() => setIsOpen(false)}
+                                            className="text-base font-medium text-text hover:text-brand"
+                                        >
+                                            {service.title}
+                                        </Link>
+                                    ))}
+                                    <Link
+                                        href="/services"
+                                        onClick={() => setIsOpen(false)}
+                                        className="text-brand font-semibold underline"
+                                    >
+                                        View All Services
+                                    </Link>
+                                </div>
                             </div>
-                            <span>+91 8299854096</span>
-                        </a>
-                        <a
-                            href="https://wa.me/918299854096"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-[#25D366] text-white py-4 rounded-xl text-center font-bold text-lg flex items-center justify-center space-x-3"
-                        >
-                            <MessageSquare className="w-6 h-6" />
-                            <span>Inquiry via WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                            <Link
+                                href="/contact"
+                                onClick={() => setIsOpen(false)}
+                                className="text-lg font-semibold border-b border-gray-100 pb-2"
+                            >
+                                Contact
+                            </Link>
+
+                            <div className="pt-6 flex flex-col space-y-4">
+                                <a
+                                    href="tel:+918299854096"
+                                    className="flex items-center space-x-3 text-lg font-bold"
+                                >
+                                    <div className="bg-brand/10 p-2 rounded-full">
+                                        <Phone className="w-5 h-5 text-brand" />
+                                    </div>
+                                    <span>+91 8299854096</span>
+                                </a>
+                                <a
+                                    href="https://wa.me/918299854096"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-[#25D366] text-white py-4 rounded-xl text-center font-bold text-lg flex items-center justify-center space-x-3"
+                                >
+                                    <MessageSquare className="w-6 h-6" />
+                                    <span>Inquiry via WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 };

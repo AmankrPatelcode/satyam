@@ -1,14 +1,14 @@
-import React from "react";
 import { Service } from "@/data/services";
 import * as Icons from "lucide-react";
 import CTASection from "./CTASection";
+import React from "react";
 
 interface ServiceDetailProps {
     service: Service;
 }
 
 const ServiceDetail = ({ service }: ServiceDetailProps) => {
-    const IconComponent = (Icons as any)[service.icon] || Icons.FileText;
+    const IconComponent = (Icons as unknown as Record<string, React.ElementType>)[service.icon] || Icons.FileText;
 
     return (
         <div className="bg-white">
@@ -110,7 +110,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
                                 <p className="text-sm text-text-muted mb-6 max-w-md mx-auto">
                                     Contact us to view a sample of our authority-approved {service.title.toLowerCase()} report as per current municipal standards.
                                 </p>
-                                <a href={`https://wa.me/918299854096?text=I'm interested in viewing a sample for ${service.title}`} className="inline-flex items-center space-x-2 text-brand font-bold hover:underline">
+                                <a href={`https://wa.me/918299854096?text=I&apos;m interested in viewing a sample for ${service.title}`} className="inline-flex items-center space-x-2 text-brand font-bold hover:underline">
                                     <span>Request Sample via WhatsApp</span>
                                     <Icons.MessageSquare className="w-4 h-4" />
                                 </a>

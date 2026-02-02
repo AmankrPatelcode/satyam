@@ -1,6 +1,4 @@
-import React from "react";
-import Link from "next/link";
-import { ShieldCheck, Award, BookOpen, GraduationCap, MapPin, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Award, BookOpen, GraduationCap, CheckCircle2 } from "lucide-react";
 import CTASection from "@/components/CTASection";
 
 export const metadata = {
