@@ -19,6 +19,17 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+        return () => {
+            document.body.style.overflow = "unset";
+        };
+    }, [isOpen]);
+
     return (
         <nav
             className={cn(
@@ -110,7 +121,7 @@ const Navbar = () => {
                         exit={{ x: "100%" }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
                         className={cn(
-                            "lg:hidden fixed inset-0 top-[60px] bg-white z-[40] overflow-y-auto"
+                            "lg:hidden fixed inset-0 top-[60px] bg-white z-[40] overflow-y-auto overscroll-behavior-contain"
                         )}
                         style={{ maxHeight: "calc(100vh - 60px)" }}
                     >
