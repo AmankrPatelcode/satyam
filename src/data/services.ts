@@ -25,14 +25,14 @@ export const services: Service[] = [
         longDescription: "Professional building map preparation following local development authority by-laws. We ensure optimal space utilization while adhering to zoning, FAR (Floor Area Ratio), and setback requirements.",
         icon: "Map",
         legalRequirements: ["Municipal Approval", "New Construction Registry", "Bank Loans"],
-        authorities: ["LDA (Lucknow)", "GDA (Ghaziabad)", "NOIDA Authority", "DDA (Delhi)"],
+        authorities: ["LDA (Lucknow)", "GDA (Ghaziabad)", "Nationalized Banks", "NBFCs", "Government Departments"],
         documentsRequired: ["Property Registry", "ID Proof", "Site Photographs"],
         compliance: {
             bylaws: "UP Urban Planning and Development Act, 1973",
             isCodes: ["IS 8888 (Part 1): 2021"],
             disclaimer: "Subject to authority verification and site conditions."
         },
-        turnaroundTime: "3-5 Working Days"
+        turnaroundTime: "1 Hour"
     },
     {
         id: "estimate-boq",
@@ -49,7 +49,7 @@ export const services: Service[] = [
             isCodes: ["IS 1200 (Method of Measurement)"],
             disclaimer: "Estimates are based on current market trends and CPWD rates."
         },
-        turnaroundTime: "2-3 Working Days"
+        turnaroundTime: "1 Working Hours"
     },
     {
         id: "route-map",
@@ -59,14 +59,14 @@ export const services: Service[] = [
         longDescription: "Detailed route maps and location plans indicating approach roads, landmarks, and surroundings as required for property registration and development projects.",
         icon: "Navigation",
         legalRequirements: ["Property Registry", "Authority Applications", "Survey Reports"],
-        authorities: ["Revenue Department", "Municipal Corporations"],
+        authorities: ["Revenue Department", "Nationalized Banks", "NBFCs", "Government Departments"],
         documentsRequired: ["Property Details", "Neighboring Landmark Info"],
         compliance: {
             bylaws: "Survey and Settlement Regulations",
             isCodes: ["IS 14931: 2001"],
             disclaimer: "Based on available revenue maps and physical survey."
         },
-        turnaroundTime: "1-2 Working Days"
+        turnaroundTime: "2-3 Working Hours"
     },
     {
         id: "colony-layout",
@@ -76,14 +76,14 @@ export const services: Service[] = [
         longDescription: "Strategic planning for residential colonies and townships including infrastructure planning (roads, drainage, electrical) as per town planning norms.",
         icon: "LayoutGrid",
         legalRequirements: ["Colony Approval", "RERA Registration", "Panchayat Approval"],
-        authorities: ["Town & Country Planning Dept", "Development Authorities"],
+        authorities: ["Revenue Department", "Nationalized Banks", "NBFCs", "Government Departments"],
         documentsRequired: ["Khasra Map", "Ownership Documents", "Contour Survey"],
         compliance: {
             bylaws: "Model Town & Country Planning Legislation",
             isCodes: ["National Building Code (NBC) - Part 3"],
             disclaimer: "Approval depends on master plan zoning."
         },
-        turnaroundTime: "7-10 Working Days"
+        turnaroundTime: "2-3 Working Hours"
     },
     {
         id: "floor-plan",
@@ -93,31 +93,32 @@ export const services: Service[] = [
         longDescription: "Optimized floor plans focusing on functionality, cross-ventilation, and Vastu principles for a harmonious living or working environment.",
         icon: "SquareBox",
         legalRequirements: ["Personal Construction", "Interior Fit-outs", "Renovations"],
-        authorities: ["Private Clients", "Builders"],
+        authorities: ["Private Clients", "Builders", "Nationalized Banks", "NBFCs", "Government Departments"],
         documentsRequired: ["Plot Size", "Client Requirements"],
         compliance: {
             isCodes: ["IS 8888 (Planning & Design of Houses)"],
             bylaws: "Standard Residential Norms",
             disclaimer: "Vastu suggestions are based on traditional principles."
         },
-        turnaroundTime: "2-4 Working Days"
+        turnaroundTime: "2-3 Working Hours"
     },
     {
         id: "msr",
-        title: "Material Specification Report (MSR)",
+        title: "Map Submition Report (MSR)",
         slug: "msr",
-        shortDescription: "IS code compliant material quality and specification reports.",
+        shortDescription: "Technical drawings for Municipal and Development Authorities.",
         longDescription: "Technical reports specifying grades of cement, steel, and other construction materials to ensure structural integrity and quality compliance.",
         icon: "FileCheck",
         legalRequirements: ["Quality Assurance", "Government Tenders", "Bank Inspections"],
-        authorities: ["Banks", "PWD", "Quality Control Units"],
+        authorities: ["Banks", "PWD", "Quality Control Units", "Lucknow DA", "GDA Ghaziabad", "Kanpur DA", "Nationalized Banks",
+            "NBFCs"],
         documentsRequired: ["Structural Drawings", "Material Samples (if any)"],
         compliance: {
             isCodes: ["IS 456 (Concrete)", "IS 1786 (Steel)"],
             bylaws: "Bureau of Indian Standards (BIS)",
             disclaimer: "Specifies quality standards to be maintained on site."
         },
-        turnaroundTime: "2-3 Working Days"
+        turnaroundTime: "5-6 Working Hours"
     },
     {
         id: "approval-drawing",
@@ -134,7 +135,7 @@ export const services: Service[] = [
             isCodes: ["IS 962: 1989 (Architectural Practice)"],
             disclaimer: "Must be signed by a registered professional."
         },
-        turnaroundTime: "3-5 Working Days"
+        turnaroundTime: "20-25 Working Days"
     },
     {
         id: "structure-stability",
@@ -144,14 +145,14 @@ export const services: Service[] = [
         longDescription: "Comprehensive structural audit and load calculation reports to certify the safety and stability of existing or new buildings.",
         icon: "ShieldAlert",
         legalRequirements: ["Commercial Licenses", "School/Bank Operation", "Old Building Audit"],
-        authorities: ["District Administration", "Education Dept", "RBI/Banks"],
+        authorities: ["Nationalized Banks", "NBFCs", "Government Departments"],
         documentsRequired: ["As-built Drawings", "Soil Test (if available)"],
         compliance: {
             isCodes: ["IS 456: 2000", "IS 1893 (Seismic Safety)"],
             bylaws: "Disaster Management Guidelines",
             disclaimer: "Certificate valid only for the specified structural state."
         },
-        turnaroundTime: "4-6 Working Days"
+        turnaroundTime: "2-3 Working Hours"
     },
     {
         id: "valuation",
@@ -161,14 +162,14 @@ export const services: Service[] = [
         longDescription: "Fair market valuation of land and buildings by a Chartered Engineer for purposes of mortgages, legal disputes, or personal assessment.",
         icon: "Landmark",
         legalRequirements: ["Loans / Mortgages", "Inheritance / Partition", "Visa Documentation"],
-        authorities: ["Income Tax Dept", "Banks", "Courts"],
+        authorities: ["Income Tax Dept", "Nationalized Banks", "NBFCs", "Government Departments"],
         documentsRequired: ["Registry Copies", "Tax Receipts", "Map"],
         compliance: {
             bylaws: "Wealth Tax Act / IBC Rules",
             isCodes: ["IVS (International Valuation Standards)"],
             disclaimer: "Valuation is an expert opinion based on market data."
         },
-        turnaroundTime: "2-3 Working Days"
+        turnaroundTime: "24 Working Hours"
     },
     {
         id: "architectural",
@@ -178,7 +179,7 @@ export const services: Service[] = [
         longDescription: "Holistic architectural solutions including conceptual design, 3D visualization, working drawings, and site supervision.",
         icon: "Home",
         legalRequirements: ["Luxury Home Construction", "Commercial Projects"],
-        authorities: ["Private Clients", "Luxury Developers"],
+        authorities: ["Private Clients", "Luxury Developers", "Builders"],
         documentsRequired: ["Site Dimensions", "Style Preferences"],
         compliance: {
             bylaws: "Council of Architecture Norms",

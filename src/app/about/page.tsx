@@ -1,4 +1,4 @@
-import { ShieldCheck, Award, BookOpen, GraduationCap, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Award, BookOpen, GraduationCap, CheckCircle2, PencilRuler, HardHat } from "lucide-react";
 import CTASection from "@/components/CTASection";
 
 export const metadata = {
@@ -30,10 +30,13 @@ export default function AboutPage() {
                                 <h2 className="text-3xl font-bold mb-6">Professional Credentials</h2>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {[
+                                        { icon: ShieldCheck, title: "Chartered Engineer", desc: "Legal Authority" },
                                         { icon: GraduationCap, title: "B.Tech (Civil)", desc: "Technical Foundation" },
                                         { icon: Award, title: "AMIE (India)", desc: "Professional Excellence" },
-                                        { icon: ShieldCheck, title: "Chartered Engineer", desc: "Legal Authority" },
-                                        { icon: BookOpen, title: "IBBI Affiliate", desc: "Valuation Expertise" }
+                                        { icon: BookOpen, title: "Group of IBBI Affiliate", desc: "Valuation Expertise" },
+                                        { icon: PencilRuler, title: "Group of Architect", desc: "Architectural Services" },
+                                        { icon: HardHat, title: "Civil Consultant", desc: "Expert Engineering Advice" }
+
                                     ].map((item, i) => (
                                         <div key={i} className="flex items-center space-x-4 p-4 bg-gray-50 rounded-2xl">
                                             <div className="bg-brand/10 p-2 rounded-xl text-brand">
@@ -67,11 +70,11 @@ export default function AboutPage() {
                                 </div>
                                 <div className="flex items-center space-x-2 text-sm font-bold text-text">
                                     <CheckCircle2 className="w-4 h-4 text-brand" />
-                                    <span>GDA Empaneled</span>
+                                    <span>Awas Bandhu Registered</span>
                                 </div>
                                 <div className="flex items-center space-x-2 text-sm font-bold text-text">
                                     <CheckCircle2 className="w-4 h-4 text-brand" />
-                                    <span>DDA Licensed</span>
+                                    <span>UPAVP Approved</span>
                                 </div>
                             </div>
                         </div>

@@ -23,7 +23,7 @@ const HeroSection = () => {
                     >
                         <div className="inline-flex items-center space-x-2 bg-brand/10 text-brand px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
                             <ShieldCheck className="w-4 h-4" />
-                            <span>Registered Engineer & Valuer</span>
+                            <span>Group Of Registered Engineer & Valuer</span>
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text mb-6 leading-[1.1] tracking-tight">
@@ -92,7 +92,7 @@ const HeroSection = () => {
                                         <h3 className="text-2xl font-bold">Er. Satyam Singh</h3>
                                         <div className="bg-green-500/10 text-green-600 text-[10px] font-bold px-2 py-1 rounded">ACTIVE CONSULTANT</div>
                                     </div>
-                                    <p className="text-text-muted text-sm font-medium">B.Tech (Civil) | AMIE (India)</p>
+                                    <p className="text-text-muted text-sm font-medium">Chartered Engineer (India) | B.Tech (Civil) | AMIE (India) </p>
                                 </div>
 
                                 <div className="space-y-6">

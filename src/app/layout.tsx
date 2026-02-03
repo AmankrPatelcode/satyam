@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Outfit, Alex_Brush } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageLayout from "@/components/PageLayout";
+import DynamicTitle from "@/components/DynamicTitle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,6 +14,12 @@ const inter = Inter({
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-display",
+});
+
+const alexBrush = Alex_Brush({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-alex",
 });
 
 export const metadata: Metadata = {
@@ -72,12 +80,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased text-text`}>
-        <Navbar />
-        <main>
-          {children}
-        </main>
-        <Footer />
+      <body className={`${inter.variable} ${outfit.variable} ${alexBrush.variable} font-sans antialiased text-text`}>
+        <DynamicTitle />
+        <PageLayout>
+          <Navbar />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </PageLayout>
       </body>
     </html>
   );

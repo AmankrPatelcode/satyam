@@ -54,17 +54,14 @@ const CTASection = ({
                     </div>
 
                     <div className="mt-12 flex flex-wrap items-center justify-center gap-8 opacity-50">
-                        <div className="flex items-center space-x-2 text-white text-xs font-semibold uppercase tracking-widest">
-                            <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-                            <span>Licensed Planning Engineer</span>
-                        </div>
+
                         <div className="flex items-center space-x-2 text-white text-xs font-semibold uppercase tracking-widest">
                             <span className="w-1.5 h-1.5 rounded-full bg-brand" />
                             <span>Chartered Engineer (India)</span>
                         </div>
                         <div className="flex items-center space-x-2 text-white text-xs font-semibold uppercase tracking-widest">
                             <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-                            <span>Registered Valuer Affiliate</span>
+                            <span>Group Of Registered Valuer Affiliate</span>
                         </div>
                     </div>
                 </div>

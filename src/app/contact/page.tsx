@@ -103,7 +103,7 @@ export default function ContactPage() {
                                         <div className="space-y-4">
                                             <div className="flex items-center justify-between border-b border-gray-200 pb-3">
                                                 <span className="text-sm font-medium">Monday - Friday</span>
-                                                <span className="text-sm font-bold">09:00 AM - 07:00 PM</span>
+                                                <span className="text-sm font-bold">10:00 AM - 07:00 PM</span>
                                             </div>
                                             <div className="flex items-center justify-between border-b border-gray-200 pb-3">
                                                 <span className="text-sm font-medium">Saturday</span>

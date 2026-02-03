@@ -17,10 +17,11 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
             <span className="text-xl font-display font-black text-gray-800 tracking-tighter italic">LUCKNOW DA</span>
-            <span className="text-xl font-display font-black text-gray-800 tracking-tighter italic">NOIDA AUTH</span>
+            <span className="text-xl font-display font-black text-gray-800 tracking-tighter italic">KANPUR DA</span>
             <span className="text-xl font-display font-black text-gray-800 tracking-tighter italic">GDA GHAZIABAD</span>
-            <span className="text-xl font-display font-black text-gray-800 tracking-tighter italic">DDA DELHI</span>
+            <span className="text-xl font-display font-black text-gray-800 tracking-tighter italic">UPAVP</span>
             <span className="text-xl font-display font-black text-gray-800 tracking-tighter italic">NAGAR NIGAM</span>
+            <span className="text-xl font-display font-black text-gray-800 tracking-tighter italic">AGRA DA</span>
           </div>
         </div>
       </section>
@@ -99,7 +100,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="bg-white/5 border border-white/10 p-8 rounded-2xl flex flex-col items-center justify-center text-center">
                     <Calendar className="w-8 h-8 text-brand mb-4" />
-                    <span className="text-3xl font-bold block">10+</span>
+                    <span className="text-3xl font-bold block">4+</span>
                     <span className="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Years Exp.</span>
                   </div>
                   <div className="bg-brand p-8 rounded-2xl flex flex-col items-center justify-center text-center text-white">
