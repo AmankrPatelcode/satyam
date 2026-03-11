@@ -95,7 +95,9 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-gray-500 text-xs text-center md:text-left">
-                    <p>© {new Date().getFullYear()} Tech solutions. All Rights Reserved.</p>
+                    <p>© {new Date().getFullYear()} <a href="https://aman.hstn.me" target="_blank" rel="noopener noreferrer">
+    Tech Solutions
+  </a>.  All Rights Reserved.</p>
                     <div className="flex space-x-6">
                         <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
@@ -108,3 +110,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
